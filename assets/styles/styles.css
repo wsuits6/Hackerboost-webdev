@@ -6,10 +6,20 @@
     box-sizing: border-box;
 }
 
+/*Defining variables for all components main colors and themes*/
+:root {
+    --text-color : #fff;
+    --header-texts : #ffffff;
+    --border-color: #99b8fb;
+    --glow:#00d0ff;
+    --bg-color: rgb(0, 0, 0);
+    --accent: rgb(225, 216, 255);
+}
+
 body {
     font-family: monospace;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     overflow-x: hidden;
 }
 
@@ -17,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
 }
 a:hover {
@@ -34,20 +44,20 @@ img {
     height: auto;
 }
 button {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
     padding: 10px 20px;
     cursor: pointer;
 }
 button:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 input, textarea {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
     padding: 5px;
 }
 input::placeholder, textarea::placeholder {
@@ -70,7 +80,7 @@ input::placeholder, textarea::placeholder {
 
 .card:hover {
     transform: translateY(-6px);
-    border-color: white;
+    border-color: var(--text-color);
 }
 
 /*Header styling*/
@@ -79,7 +89,7 @@ input::placeholder, textarea::placeholder {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     background: rgba(0,0,0,0.7);
@@ -92,6 +102,7 @@ input::placeholder, textarea::placeholder {
     font-weight: 600;
     opacity: 0.8;
     transition: opacity 0.2s;
+    color: var(--header-texts);
 }
 
 .menu-container a:hover {
@@ -107,7 +118,7 @@ input::placeholder, textarea::placeholder {
     font-size: 2rem;
     font-family: monospace;
     font-weight: bold;
-    text-shadow: 0px 0px 4px white;
+    text-shadow: 0px 0px 4px var(--glow);
     letter-spacing: 2px;
 }
 
@@ -121,7 +132,7 @@ input::placeholder, textarea::placeholder {
 
 .text-container {
     flex: 1;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid var(--border-color);
     padding: 30px;
     border-radius: 10px;
 }
@@ -129,7 +140,7 @@ input::placeholder, textarea::placeholder {
 .image-container {
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid var(--border-color);
 }
 
 /*SKILLS STYLING*/
@@ -143,6 +154,7 @@ input::placeholder, textarea::placeholder {
 .skill-card {
     border-radius: 12px;
     padding: 25px;
+    border: 1px solid var(--border-color);
 }
 
 /*Project section styling*/
@@ -154,10 +166,11 @@ input::placeholder, textarea::placeholder {
 .project-header h2{
     font-weight: bold;
     font-size: 3rem;
-    text-shadow: 0px 0px 6px white;
+    text-shadow: 0px 0px 6px var(--glow);
 }
 .tagline{
     font-size: 1.5rem;
+    color: var(--accent);
 }
 .projects-container {
     display: grid;
@@ -168,6 +181,7 @@ input::placeholder, textarea::placeholder {
 
 .project-card {
     border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .project-image{
@@ -180,19 +194,20 @@ input::placeholder, textarea::placeholder {
     font-weight: bold;
     font-size: 2rem;
     margin: 10px;
-    text-shadow: 0px 0px 2px white;
+    text-shadow: 0px 0px 2px var(--glow);
     letter-spacing: 2px;
     text-align: center;
 }
 
 .project-text{
     text-align: center;
+    color: var(--text-color);
 }
 
 /*Hobbies styling*/
 .hobbies-header{
     text-align: center;
-    text-shadow: 0px 0px 4px white;
+    text-shadow: 0px 0px 4px var(--glow);
     margin: 30px;
     padding: 20px;
     font-size: 1.5em;
@@ -207,7 +222,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .hobbies-card {
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     padding: 25px;
     border-radius: 10px;
     text-align: center;
@@ -231,12 +246,59 @@ input::placeholder, textarea::placeholder {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: rgba(0, 0, 0, 0.6); /* slightly transparent bg */
+    border: 1px solid var(--border-color);
 }
+
+input, textarea {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent);
+    padding: 10px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: gray;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--glow);
+    box-shadow: 0 0 6px var(--glow);
+}
+
+
+/*Button styling */
+button#sendbtn {
+    background-color: var(--accent);
+    color: var(--text-color);
+    border: 1px solid var(--glow);
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button#sendbtn:hover {
+    background-color: var(--glow);
+    box-shadow: 0 0 10px var(--glow);
+}
+/*Resposnive twist*/
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto; /* center on larger screens */
+}
+
 
 /*Responsive styling*/
 @media (max-width: 900px) {
 
-    /* Let the top sections breathe instead of suffocating */
     .header-container {
         padding: 20px;
         flex-direction: column;
@@ -251,9 +313,8 @@ input::placeholder, textarea::placeholder {
     }
 
     .hobbies-container {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .skills-container,
     .projects-container,
