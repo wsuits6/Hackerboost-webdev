@@ -69,3 +69,14 @@ console.log(A >= B)
 console.log(B <= A)
 console.log(A <= B)
 
+
+/**Animations Javascripts */
+const elements = document.querySelectorAll('.fade-in');
+
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('show');
+    });
+});
+
+elements.forEach(el => obs.observe(el));
