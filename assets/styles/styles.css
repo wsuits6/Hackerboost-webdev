@@ -1,14 +1,18 @@
 /*Global styling for basi components */
 
-*{
-    font-family: monospace;
-    color: white;
-    background-color: black;
-}
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: monospace;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
@@ -50,6 +54,24 @@ input::placeholder, textarea::placeholder {
     color: gray;
 }
 
+/*Universal NEXT JS styling codes for cards */
+.border-soft {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.card {
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: white;
+}
 
 /*Header styling*/
 
@@ -205,3 +227,62 @@ input::placeholder, textarea::placeholder {
     text-align: center;
    
 }
+
+/*Contact secton styling */
+.contact-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-height: 400px;
+    margin: 50px;
+
+}
+
+.contact-form{
+    border: 2px solid white;
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+
+/*Reponsive styling */
+@media (max-width: 900px) {
+    .header-container,
+    .content-container,
+    .skills-container,
+    .projects-container,
+    .hobbies-container,
+    .contact-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .menu-container {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .text-container,
+    .image-container,
+    .skill-card,
+    .project-card,
+    .hobbies-card,
+    .contact-form {
+        width: 100%;
+    }
+
+    .project-card,
+    .hobbies-card {
+        width: 90%;
+    }
+}
+
+
