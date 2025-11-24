@@ -74,31 +74,30 @@ input::placeholder, textarea::placeholder {
 }
 
 /*Header styling*/
-
-.header-container{
+.header-container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 5rem;
-    margin: 10px;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(6px);
+    z-index: 100;
 }
-.header-container{
-    border: 1px solid white;
-    padding: 5px;
 
+.menu-container a {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.8;
+    transition: opacity 0.2s;
 }
-.menu-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
-    width: 50%;
+
+.menu-container a:hover {
+    opacity: 1;
 }
-.menu-container a{
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-}
+
 
 /*LOGO styling*/
 .logo-container{
