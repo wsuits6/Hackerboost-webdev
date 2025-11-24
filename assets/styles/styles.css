@@ -198,19 +198,21 @@ input::placeholder, textarea::placeholder {
     font-size: 1.5em;
 }
 
-.hobbies-container{
+.hobbies-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
     width: 100%;
+    padding: 10px;
 }
 
-.hobbies-card{
+.hobbies-card {
     border: 2px solid white;
-    margin: 20px;
-    padding: 30px;
-    width: 100%;
+    padding: 25px;
+    border-radius: 10px;
     text-align: center;
+    width: 100%;
+    margin: 0; /* FIX: Removes overflow issue */
 }
 
 /*Contact section styling*/
@@ -248,11 +250,10 @@ input::placeholder, textarea::placeholder {
         gap: 10px;
     }
 
-    .content-container {
-        flex-direction: column;
-        padding: 20px;
-        gap: 25px;
+    .hobbies-container {
+    grid-template-columns: 1fr;
     }
+
 
     .skills-container,
     .projects-container,
