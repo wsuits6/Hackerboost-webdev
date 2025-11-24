@@ -164,20 +164,17 @@ input::placeholder, textarea::placeholder {
 .tagline{
     font-size: 1.5rem;
 }
-.projects-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    width: 100%;
+    padding: 30px;
 }
 
-.project-card{
-    border: solid 2px white;
-    padding: 30px;
-    width: 20%;
-    text-align: center;
+.project-card {
+    border-radius: 8px;
 }
+
 
 .project-image{
     width: 40%;
