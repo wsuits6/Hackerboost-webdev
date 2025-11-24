@@ -136,20 +136,18 @@ input::placeholder, textarea::placeholder {
 
 
 /*SKILSS STYLING*/
-.skills-container{
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    gap: 30px;
-    align-items: center;
-    width: 100%;
-}
-.skill-card{
-    border: solid white 2px;
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
     padding: 40px;
-    width: 50%;
-    margin: 20px;
 }
+
+.skill-card {
+    border-radius: 12px;
+    padding: 25px;
+}
+
 
 /*Poject section styling*/
 
