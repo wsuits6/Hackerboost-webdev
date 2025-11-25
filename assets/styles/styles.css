@@ -139,6 +139,12 @@ input::placeholder, textarea::placeholder {
     border: 1px solid var(--border-color);
     padding: 30px;
     border-radius: 10px;
+
+}.text-container p{
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
 }
 
 .image-container {
@@ -160,7 +166,10 @@ input::placeholder, textarea::placeholder {
     padding: 25px;
     border: 1px solid var(--border-color);
 }
-
+.skills-header{
+    text-align: center;
+    font-size: 2rem;
+}
 /*Project section styling*/
 .project-header{
     text-align: center;
