@@ -314,7 +314,35 @@ button#sendbtn:hover {
         font-size: 2rem;
         padding: 20px;
         margin: 20px;
+        text-align: center;
     }
+    .text-container h2{
+        font-size: 2rem;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+    }
+    .tagline {
+        font-size: large;
+        padding: 30px;
+        max-width: 20px;
+        margin: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+    .image-container img{
+        width: 100%;
+        height: auto;
+        max-width: 50rem;
+    }
+    .skills-header h1{
+        font-size: 2rem;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+    }
+}
+
 @media (max-width: 900px) {
 
     .header-container {
