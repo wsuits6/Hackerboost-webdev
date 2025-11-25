@@ -112,7 +112,7 @@ input::placeholder, textarea::placeholder {
 /*LOGO styling*/
 .logo-container{
     margin: 10px;
-    width: 50%;
+    width: 20%;
 }
 .logo{
     font-size: 2rem;
@@ -120,6 +120,7 @@ input::placeholder, textarea::placeholder {
     font-weight: bold;
     text-shadow: 0px 0px 4px var(--glow);
     letter-spacing: 2px;
+    width: 20%;
 }
 
 /*About section styling*/
@@ -296,7 +297,24 @@ button#sendbtn:hover {
 }
 
 
-/*Responsive styling*/
+/* Respsonsiv stylin of all main containers*/
+
+
+/*Styling for content contianer in the about section creatted a coolumn layout  */
+@media (max-width: 900px) {
+    .content-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;   
+    }
+    
+    /*Chekcing the size of headers on smaller screens */
+    .text-container h1{
+        font-size: 2rem;
+        padding: 20px;
+        margin: 20px;
+    }
 @media (max-width: 900px) {
 
     .header-container {
@@ -336,16 +354,4 @@ button#sendbtn:hover {
     .contact-form {
         width: 100%;
     }
-}
-
-/*Fade animation*/
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
 }
