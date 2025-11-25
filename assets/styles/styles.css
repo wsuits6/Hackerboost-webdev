@@ -64,7 +64,10 @@ input::placeholder, textarea::placeholder {
     color: gray;
 }
 
-/*Universal NEXT JS styling codes for cards */
+
+/*Now i am going to od somehting i always like don gmy obessession with gid line statting from seeing hackerboost backgroun image */
+/*yh yh I am trying to make my website look like a next js websitwe  */
+
 .border-soft {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
@@ -228,7 +231,7 @@ input::placeholder, textarea::placeholder {
     border-radius: 10px;
     text-align: center;
     width: 100%;
-    margin: 0; /* FIX: Removes overflow issue */
+    margin: 0; 
 }
 
 /*Contact section styling*/
