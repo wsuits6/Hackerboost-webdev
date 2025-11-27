@@ -1,9 +1,12 @@
 /*Global styling for basic components */
 
+
+/*making sure all defult padding and magins are set to zero */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var();
 }
 
 /*Defining variables for all components main colors and themes*/
@@ -17,7 +20,7 @@
 }
 
 body {
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
@@ -65,26 +68,6 @@ input::placeholder, textarea::placeholder {
 }
 
 
-/*Now i am going to od somehting i always like don gmy obessession with gid line statting from seeing hackerboost backgroun image */
-/*yh yh I am trying to make my website look like a next js websitwe  */
-
-.border-soft {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-}
-
-.card {
-    border: 1px solid rgba(255,255,255,0.15);
-    padding: 25px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.03);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: var(--text-color);
-}
 
 /*Header styling*/
 .header-container {
@@ -96,7 +79,7 @@ input::placeholder, textarea::placeholder {
     position: sticky;
     top: 0;
     background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(10px);
     z-index: 100;
 }
 
@@ -165,10 +148,12 @@ input::placeholder, textarea::placeholder {
     border-radius: 12px;
     padding: 25px;
     border: 1px solid var(--border-color);
+    
 }
 .skills-header{
     text-align: center;
     font-size: 2rem;
+    margin: 30px;
 }
 /*Project section styling*/
 .project-header{
@@ -180,6 +165,7 @@ input::placeholder, textarea::placeholder {
     font-weight: bold;
     font-size: 3rem;
     text-shadow: 0px 0px 6px var(--glow);
+    margin: 30px;
 }
 .tagline{
     font-size: 1.5rem;
@@ -224,6 +210,7 @@ input::placeholder, textarea::placeholder {
     margin: 30px;
     padding: 20px;
     font-size: 1.5em;
+    
 }
 
 .hobbies-container {
@@ -250,13 +237,15 @@ input::placeholder, textarea::placeholder {
     align-items: flex-start;
     gap: 30px;
     width: 100%;
-    margin: 50px;
+    margin: 100px;
 }
 
 .contact-form {
+    margin: 100px;
     border-radius: 12px;
     padding: 30px;
     display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 15px;
     background-color: rgba(0, 0, 0, 0.6); /* slightly transparent bg */
@@ -274,10 +263,13 @@ input, textarea {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+
+/*Psudeo classes*/
 input::placeholder, textarea::placeholder {
     color: gray;
 }
 
+/*Psudeo classes*/
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--glow);
@@ -355,6 +347,7 @@ button#sendbtn:hover {
     }
 }
 
+/*Container Respsnve allgining for all Elements   on the page */
 @media (max-width: 900px) {
 
     .header-container {
